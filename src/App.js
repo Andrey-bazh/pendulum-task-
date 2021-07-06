@@ -14,14 +14,14 @@ function App() {
         length -= 10;
     }
 
-    const addWeight = () => {
-        if(bobWeight === 1) return;
-        bobWeight -= 1;
-    }
-
-    const removeWeight = () =>{
-        bobWeight += 1;
-    }
+    // const addWeight = () => {
+    //     if(bobWeight === 1) return;
+    //     bobWeight -= 1;
+    // }
+    //
+    // const removeWeight = () =>{
+    //     bobWeight += 1;
+    // }
     let angle; // угол мятника
     let velocity = 0; // скорость
     let acceleration = 0; // ускорение
@@ -32,12 +32,12 @@ function App() {
     let gravity = 1; // силя тяжести
 
     let setup = (p5, canvasParentRef) => {
-        p5.createCanvas(700, 500).parent(canvasParentRef);
+        p5.createCanvas(900, 500).parent(canvasParentRef);
         p5.frameRate(React.Component.frameRate);
         // length = 300;  // зададим значения переменным
         angle = Math.PI / 2;
         bob = p5.createVector();
-        origin = p5.createVector(300, 0);
+        origin = p5.createVector(400, 0);
     };
 
     let draw = (p5) => {
@@ -66,8 +66,8 @@ function App() {
             <div className='buttons-wrapper'>
             <button onClick={() => addLength()}>Увеличить веревку</button>
             <button onClick={() => removeLength()}>Уменьшить веревку</button>
-            <button onClick={() => addWeight()}>Увеличить груз</button>
-            <button onClick={() => removeWeight()}>Уменьшить груз</button>
+            {/*<button onClick={() => addWeight()}>Увеличить груз</button>*/}
+            {/*<button onClick={() => removeWeight()}>Уменьшить груз</button>*/}
             </div>
         </div>
     );
