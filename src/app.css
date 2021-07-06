@@ -9,3 +9,26 @@
     align-items: center;
     height: 800px;
 }
+button {
+    padding: 5px;
+    margin: 10px;
+    border: solid 3px #cd5c5c;
+    color: black;
+    font-size: 15px;
+    background-color: #d2f8f8;
+    cursor: pointer;
+
+
+}
+button:hover{
+    transition: 1s;
+    background-color: #f3c0ad;
+}
+.buttons-wrapper {
+    width: 400px;
+
+}
+
+input{
+    outline: none;
+}
